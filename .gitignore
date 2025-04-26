@@ -17,9 +17,6 @@ yarn-error.log*
 /frontend-main/.next/
 /frontend-main/.cache/
 
-# Ignore uploads if you don't want to track them
-/uploads/
-
 # Ignore system files
 .DS_Store
 Thumbs.db
