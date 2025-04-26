@@ -1,0 +1,39 @@
+/* Sidebar adjustments */
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background: #001529;
+  }
+  
+  /* Push main content right when sidebar is shown */
+  .site-layout {
+    transition: margin-left 0.3s ease;
+  }
+  
+  .ant-layout-content {
+    transition: all 0.3s ease;
+  }
+  
+  /* For better ant-table readability */
+  .ant-table {
+    font-size: 14px;
+  }
+  
+  /* Make text scale better on smaller screens */
+  @media screen and (max-width: 768px) {
+    .ant-table {
+      font-size: 12px;
+    }
+  
+    .ant-select {
+      width: 100px !important;
+    }
+  
+    .ant-layout-content {
+      padding: 12px !important;
+    }
+  }
+  

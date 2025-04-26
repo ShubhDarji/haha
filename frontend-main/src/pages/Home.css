@@ -1,0 +1,136 @@
+/* Global Font & Reset */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slider Section Styling */
+.slider-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+
+/* Product Card Styling */
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin: 10px 0 6px;
+}
+
+.product-card p {
+  font-size: 15px;
+  color: #0071c5;
+  font-weight: bold;
+}
+
+/* Deal Timer Section */
+.deal-timer {
+  text-align: center;
+  background-color: #0071c5;
+  color: white;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.deal-timer span {
+  font-weight: bold;
+  background-color: #fff;
+  color: #0071c5;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 8px;
+}
+
+/* Slick Slider Navigation Styling */
+.slick-prev, .slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 24px;
+  color: #0071c5;
+}
+
+/* Slick Slider Dots Styling */
+.slick-dots {
+  bottom: -20px;
+}
+
+.slick-dots li button:before {
+  color: #0071c5 !important;
+  font-size: 12px !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 180px;
+    padding: 12px;
+  }
+
+  .product-card img {
+    height: 150px;
+  }
+
+  .deal-timer {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-section {
+    padding: 10px;
+  }
+
+  .product-card {
+    max-width: 160px;
+  }
+
+  .product-card img {
+    height: 140px;
+  }
+
+  .deal-timer {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

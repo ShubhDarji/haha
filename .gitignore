@@ -1,41 +1,18 @@
-# Ignore node_modules everywhere
-**/node_modules/
+# Root .gitignore
 
-# Ignore logs
-*.log
-logs
+# Node modules
+/node_modules
+
+# Environment
+.env
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Ignore environment files
-.env
-.env.local
-
-# Ignore build files
-/frontend-main/build/
-/frontend-main/.next/
-/frontend-main/.cache/
-
-# Ignore system files
+# System files
 .DS_Store
-Thumbs.db
 
-# Ignore IDE files
-.vscode/
-.idea/
-
-# Ignore coverage reports
-coverage/
-
-# Ignore production databases (optional)
-*.sqlite
-*.db
-
-# Ignore server compiled files (if you ever use TypeScript or dist folders)
-/dist/
-/build/
-
-# Allow important files (optional safeties)
-/frontend-main/public/
-!/frontend-main/public/index.html
+# Testing
+/coverage

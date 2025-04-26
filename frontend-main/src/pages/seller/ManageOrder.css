@@ -1,0 +1,66 @@
+/* General Layout */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f6f8;
+}
+
+/* Responsive Table */
+.ant-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ant-table th, .ant-table td {
+  white-space: nowrap;
+}
+
+/* Search Input */
+.search-input {
+  margin: 16px 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Modal Styles */
+.modal-content {
+  padding: 8px 0;
+}
+
+.modal-description {
+  margin-top: 24px;
+}
+
+.ordered-products {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  flex-wrap: wrap;
+}
+
+.ordered-products img {
+  margin-right: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ordered-products {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ordered-products img {
+    margin-bottom: 10px;
+  }
+} 

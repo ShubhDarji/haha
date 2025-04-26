@@ -1,0 +1,44 @@
+/* Seller Sidebar Styles */
+.seller-sidebar {
+  height: auto;
+  background-color: #001529;
+  overflow: auto;
+}
+
+.seller-sidebar .ant-menu {
+  border-right: none;
+}
+
+.seller-sidebar .ant-menu-item {
+  font-size: 1rem;
+  
+}
+
+.seller-sidebar .ant-menu-item:hover {
+  background-color: #1890ff;
+}
+
+.seller-sidebar .ant-menu-item-selected {
+  background-color: #1890ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .seller-sidebar {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: auto;
+  }
+
+  .seller-sidebar .ant-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .seller-sidebar .ant-menu-item {
+    flex: 1;
+    text-align: center;
+  }
+} 

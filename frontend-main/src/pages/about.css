@@ -1,0 +1,115 @@
+.about-page {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: "Segoe UI", sans-serif;
+    color: #222;
+    background-color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  
+  .concept-art h2,
+  .teaser-3d h2,
+  .signup-section h2 {
+    margin-top: 40px;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .subtext {
+    color: #888;
+    margin-bottom: 16px;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  
+  .concept-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .concept-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .teaser-canvas {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1e1e2f;
+    margin-bottom: 24px;
+  }
+  
+  .signup-form {
+    display: flex;
+    gap: 12px;
+    max-width: 500px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .signup-form input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .signup-form button {
+    padding: 12px 24px;
+    background-color: #ff7f0e;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .signup-form button:hover {
+    background-color: #e76e00;
+  }
+  
+  .note {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .cta-button {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .cta-button button {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .cta-button button:hover {
+    background-color: #000;
+  }

@@ -1,0 +1,28 @@
+/* Optional: Polished sidebar support */
+.site-layout {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .ant-table {
+    font-size: 14px;
+  }
+  
+  .ant-table td {
+    vertical-align: middle;
+  }
+  
+  /* Responsive tweaks */
+  @media screen and (max-width: 768px) {
+    .ant-table {
+      font-size: 12px;
+    }
+  
+    .ant-select {
+      width: 100px !important;
+    }
+  
+    .ant-layout-content {
+      padding: 12px !important;
+    }
+  }
+  
