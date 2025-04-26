@@ -25,7 +25,7 @@ const Profile = () => {
   const fetchUserProfile = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5001/api/users/profile", {
+      const res = await axios.get("https://etek-nxx9.onrender.com/api/users/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -81,7 +81,7 @@ const Profile = () => {
     }
   
     try {
-      const res = await axios.put("http://localhost:5001/api/users/profile", formData, {
+      const res = await axios.put("https://etek-nxx9.onrender.com/api/users/profile", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
@@ -110,7 +110,7 @@ const Profile = () => {
                 <img src={previewUrl} alt="Preview" className="profile-image" />
               ) : user.profilePic ? (
                 <img
-                  src={`http://localhost:5001${user.profilePic}`}
+                  src={`https://etek-nxx9.onrender.com${user.profilePic}`}
                   alt="Profile"
                   className="profile-image"
                 />

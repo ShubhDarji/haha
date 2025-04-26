@@ -33,7 +33,7 @@ const User = () => {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get("http://localhost:5001/api/users", {
+      const { data } = await axios.get("https://etek-nxx9.onrender.com/api/users", {
         headers: { Authorization: `Bearer ${adminToken}` },
       });
       setUsers(data);
@@ -50,7 +50,7 @@ const User = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/users/${id}`, {
+      await axios.delete(`https://etek-nxx9.onrender.com/api/users/${id}`, {
         headers: { Authorization: `Bearer ${adminToken}` },
       });
       message.success("User deleted");
@@ -77,12 +77,12 @@ const User = () => {
       const values = await form.validateFields();
 
       if (editingUser) {
-        await axios.put(`http://localhost:5001/api/users/profile`, values, {
+        await axios.put(`https://etek-nxx9.onrender.com/api/users/profile`, values, {
           headers: { Authorization: `Bearer ${adminToken}` },
         });
         message.success("User updated");
       } else {
-        await axios.post("http://localhost:5001/api/users/signup", values);
+        await axios.post("https://etek-nxx9.onrender.com/api/users/signup", values);
         message.success("User created");
       }
 

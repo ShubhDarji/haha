@@ -4,7 +4,7 @@ import Sidebar from "./sidebar";
 import axios from "axios";
 
 const { Content } = Layout;
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5001";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://etek-nxx9.onrender.com";
 
 const AdminOrders = () => {
   const [orders, setOrders] = useState([]);

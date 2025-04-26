@@ -19,7 +19,7 @@ const VerifyEmail = () => {
     try {
       setLoading(true);
       setError("");
-      const res = await axios.post("http://localhost:5001/api/auth/user/verify-mail", {
+      const res = await axios.post("https://etek-nxx9.onrender.com/api/auth/user/verify-mail", {
         email,
         code,
       });

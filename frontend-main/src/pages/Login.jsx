@@ -23,7 +23,7 @@ const Login = () => {
 
     try {
       // Step 1: Login Request
-      const response = await axios.post("http://localhost:5001/api/auth/user/login", {
+      const response = await axios.post("https://etek-nxx9.onrender.com/api/auth/user/login", {
         email,
         password,
       });
@@ -37,7 +37,7 @@ const Login = () => {
       localStorage.setItem("token", token);
 
       // Step 3: Fetch full user profile
-      const profileRes = await axios.get("http://localhost:5001/api/users/profile", {
+      const profileRes = await axios.get("https://etek-nxx9.onrender.com/api/users/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
 

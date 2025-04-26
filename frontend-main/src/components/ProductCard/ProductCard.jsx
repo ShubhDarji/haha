@@ -8,7 +8,7 @@ import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import "./product-card.css";
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5001";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://etek-nxx9.onrender.com";
 
 const StarRating = ({ rating }) => (
   <div className="product-rating">

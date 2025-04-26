@@ -13,7 +13,7 @@ const Login = () => {
     setLoading(true);
     try {
       // ✅ API Call for Admin Login
-      const { data } = await axios.post("http://localhost:5001/api/admin/login", values);
+      const { data } = await axios.post("https://etek-nxx9.onrender.com/api/admin/login", values);
 
       // ✅ Token Storage
       localStorage.setItem("adminToken", data.token);

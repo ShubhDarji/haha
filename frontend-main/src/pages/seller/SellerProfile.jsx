@@ -21,7 +21,7 @@ const SellerProfile = () => {
   const fetchProfile = async () => {
     try {
       const token = localStorage.getItem("sellerToken");
-      const { data } = await axios.get("http://localhost:5001/api/seller/profile", {
+      const { data } = await axios.get("https://etek-nxx9.onrender.com/api/seller/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setProfile(data);
@@ -34,7 +34,7 @@ const SellerProfile = () => {
     try {
       const token = localStorage.getItem("sellerToken");
       await axios.put(
-        "http://localhost:5001/api/seller/profile",
+        "https://etek-nxx9.onrender.com/api/seller/profile",
         profile,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -60,7 +60,7 @@ const SellerProfile = () => {
         <Avatar size={100} src={profile.avatar} icon={<UserOutlined />} />
         <Upload
           name="avatar"
-          action="http://localhost:5001/api/upload-avatar"
+          action="https://etek-nxx9.onrender.com/api/upload-avatar"
           onChange={handleAvatarUpload}
           showUploadList={false}
         >

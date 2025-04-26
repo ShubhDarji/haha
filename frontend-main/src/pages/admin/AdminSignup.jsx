@@ -22,7 +22,7 @@ const AdminSignup = () => {
     try {
       console.log("📡 Sending signup request:", formData);
 
-      const res = await axios.post("http://localhost:5001/api/admin/signup", formData, {
+      const res = await axios.post("https://etek-nxx9.onrender.com/api/admin/signup", formData, {
         headers: { "Content-Type": "application/json" },
       });
 

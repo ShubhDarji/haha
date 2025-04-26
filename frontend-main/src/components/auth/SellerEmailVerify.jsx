@@ -12,7 +12,7 @@ const SellerEmailVerify = () => {
   const onFinish = async ({ code }) => {
     try {
       setLoading(true);
-      await axios.post("http://localhost:5001/api/auth/verify-code", { email, code });
+      await axios.post("https://etek-nxx9.onrender.com/api/auth/verify-code", { email, code });
 
       message.success("Email verified successfully! You can now log in.");
       navigate("/seller/login");

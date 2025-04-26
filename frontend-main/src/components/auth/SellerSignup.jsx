@@ -68,7 +68,7 @@ const SellerSignup = () => {
   
     try {
       setLoading(true);
-      await axios.post("http://localhost:5001/api/auth/signup", finalData, {
+      await axios.post("https://etek-nxx9.onrender.com/api/auth/signup", finalData, {
         withCredentials: true,
       });
   

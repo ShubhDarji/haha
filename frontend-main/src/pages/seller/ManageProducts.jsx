@@ -23,7 +23,7 @@ const { Option } = Select;
 const { TextArea } = Input;
 
 const STATUS_OPTIONS = ["Active", "Inactive"];
-const API_BASE_URL = "http://localhost:5001/api/products";
+const API_BASE_URL = "https://etek-nxx9.onrender.com/api/products";
 
 const ManageProducts = () => {
   const [loading, setLoading] = useState(true);

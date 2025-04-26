@@ -11,7 +11,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5001/api/auth/register", user);
+      await axios.post("https://etek-nxx9.onrender.com/api/auth/register", user);
       alert("User registered successfully!");
     } catch (err) {
       alert("Error registering user");

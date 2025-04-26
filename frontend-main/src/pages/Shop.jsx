@@ -32,7 +32,7 @@ const getImageUrl = (imagePath) => {
   const isAbsoluteUrl = /^https?:\/\//.test(imagePath);
   return isAbsoluteUrl 
     ? imagePath 
-    : `http://localhost:5001/uploads/${encodeURIComponent(imagePath)}`;
+    : `https://etek-nxx9.onrender.com/uploads/${encodeURIComponent(imagePath)}`;
 };
 
 // ✅ Fetch and Merge Products with Image URLs
@@ -41,7 +41,7 @@ const fetchProducts = async () => {
   setError("");
 
   try {
-    const { data: apiProducts } = await axios.get("http://localhost:5001/api/products");
+    const { data: apiProducts } = await axios.get("https://etek-nxx9.onrender.com/api/products");
 
     // ✅ Ensure Product Image URLs are Available
     const formattedAPIProducts = apiProducts

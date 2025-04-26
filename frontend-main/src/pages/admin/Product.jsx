@@ -31,7 +31,7 @@ const Product = () => {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get("http://localhost:5001/api/products", {
+      const { data } = await axios.get("https://etek-nxx9.onrender.com/api/products", {
         headers: { Authorization: `Bearer ${adminToken}` },
       });
       setProducts(data);
@@ -46,7 +46,7 @@ const Product = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/products/delete/${id}`, {
+      await axios.delete(`https://etek-nxx9.onrender.com/api/products/delete/${id}`, {
         headers: { Authorization: `Bearer ${adminToken}` },
       });
       message.success("Product deleted");
@@ -59,7 +59,7 @@ const Product = () => {
   const handleStatusChange = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5001/api/products/admin/status/${id}`,
+        `https://etek-nxx9.onrender.com/api/products/admin/status/${id}`,
         { status },
         {
           headers: { Authorization: `Bearer ${adminToken}` },
@@ -87,7 +87,7 @@ const Product = () => {
       render: (img) => (
         <Image
           width={60}
-          src={`http://localhost:5001/uploads/${img}`}
+          src={`https://etek-nxx9.onrender.com/uploads/${img}`}
           alt="product"
           style={{
             objectFit: "contain",

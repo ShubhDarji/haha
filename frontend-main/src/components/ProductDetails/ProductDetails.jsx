@@ -12,7 +12,7 @@ const getImageUrl = (imagePath) => {
   const isAbsoluteUrl = /^https?:\/\//.test(imagePath);
   return isAbsoluteUrl
     ? imagePath
-    : `http://localhost:5001/uploads/${encodeURIComponent(imagePath)}`;
+    : `https://etek-nxx9.onrender.com/uploads/${encodeURIComponent(imagePath)}`;
 };
 
 const ProductDetails = ({ selectedProduct }) => {

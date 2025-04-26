@@ -28,7 +28,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5001/api/auth/user/signup", formData);
+      const res = await axios.post("https://etek-nxx9.onrender.com/api/auth/user/signup", formData);
 
       // Navigate to email verification with email info
       navigate("/verify-mail", { state: { email: formData.email } });

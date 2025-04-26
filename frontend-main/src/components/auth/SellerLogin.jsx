@@ -10,7 +10,7 @@ const SellerLogin = () => {
 
   const handleLogin = async (values) => {
     try {
-      const { data } = await axios.post("http://localhost:5001/api/auth/login", values);
+      const { data } = await axios.post("https://etek-nxx9.onrender.com/api/auth/login", values);
       const { token, seller } = data;
 
       // Validate response structure

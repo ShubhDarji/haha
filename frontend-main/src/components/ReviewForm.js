@@ -35,7 +35,7 @@ const ReviewForm = ({ productId, onReviewSubmit }) => {
           Authorization: `Bearer ${userInfo.token}`,
         },
       };
-      await axios.post(`http://localhost:5001/api/reviews`, formData, config);
+      await axios.post(`https://etek-nxx9.onrender.com/api/reviews`, formData, config);
       alert("Review submitted!");
       onReviewSubmit();
     } catch (err) {

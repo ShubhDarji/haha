@@ -41,15 +41,15 @@ const Product = () => {
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const { data: productData } = await axios.get(`http://localhost:5001/api/products/${id}`);
+        const { data: productData } = await axios.get(`https://etek-nxx9.onrender.com/api/products/${id}`);
         setProduct(productData);
         setCurrentImage(
           productData.primaryImage
-            ? `http://localhost:5001/uploads/${productData.primaryImage}`
+            ? `https://etek-nxx9.onrender.com/uploads/${productData.primaryImage}`
             : "/default-product.png"
         );
 
-        const { data: allProducts } = await axios.get(`http://localhost:5001/api/products`);
+        const { data: allProducts } = await axios.get(`https://etek-nxx9.onrender.com/api/products`);
         const related = allProducts.filter(
           (item) => item.companyName === productData.companyName && item._id !== productData._id
         );
@@ -77,7 +77,7 @@ const Product = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:5001/api/reviews/${id}`);
+        const { data } = await axios.get(`https://etek-nxx9.onrender.com/api/reviews/${id}`);
         setReviews(data);
       } catch (err) {
         console.error("Error fetching reviews:", err);
@@ -125,12 +125,12 @@ const Product = () => {
                 (img, index) => (
                   <img
                     key={index}
-                    src={img.startsWith("http") ? img : `http://localhost:5001/uploads/${img}`}
+                    src={img.startsWith("http") ? img : `https://etek-nxx9.onrender.com/uploads/${img}`}
                     alt={`Thumbnail ${index}`}
                     className={`thumbnail ${currentImage.includes(img) ? "active-thumbnail" : ""}`}
                     onClick={() =>
                       setCurrentImage(
-                        img.startsWith("http") ? img : `http://localhost:5001/uploads/${img}`
+                        img.startsWith("http") ? img : `https://etek-nxx9.onrender.com/uploads/${img}`
                       )
                     }
                   />
@@ -216,7 +216,7 @@ const Product = () => {
               <div className="specs-images">
                 {product.primaryImage && (
                   <img
-                    src={`http://localhost:5001/uploads/${product.primaryImage}`}
+                    src={`https://etek-nxx9.onrender.com/uploads/${product.primaryImage}`}
                     alt="Primary"
                     className="spec-img-tall"
                   />
@@ -224,7 +224,7 @@ const Product = () => {
                 {product.secondaryImages?.map((img, idx) => (
                   <img
                     key={idx}
-                    src={img.startsWith("http") ? img : `http://localhost:5001/uploads/${img}`}
+                    src={img.startsWith("http") ? img : `https://etek-nxx9.onrender.com/uploads/${img}`}
                     alt={`Secondary ${idx}`}
                     className="spec-img-tall"
                   />
@@ -264,7 +264,7 @@ const Product = () => {
                         {review.images.map((img, idx) => (
                           <img
                             key={idx}
-                            src={`http://localhost:5001/uploads/reviews/${img}`}
+                            src={`https://etek-nxx9.onrender.com/uploads/reviews/${img}`}
                             alt={`Review ${idx}`}
                             className="review-image"
                           />
@@ -276,7 +276,7 @@ const Product = () => {
                       <div className="review-video-wrapper mt-3">
                         <video controls className="review-video">
                           <source
-                            src={`http://localhost:5001/uploads/reviews/${review.video}`}
+                            src={`https://etek-nxx9.onrender.com/uploads/reviews/${review.video}`}
                             type="video/mp4"
                           />
                           Your browser does not support the video tag.

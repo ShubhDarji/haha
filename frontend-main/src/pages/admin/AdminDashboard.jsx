@@ -49,10 +49,10 @@ const AdminDashboard = () => {
       const headers = { Authorization: `Bearer ${adminToken}` };
 
       const [usersRes, sellersRes, productsRes, ordersRes] = await Promise.all([
-        axios.get("http://localhost:5001/api/admin/users", { headers }),
-        axios.get("http://localhost:5001/api/admin/sellers", { headers }),
-        axios.get("http://localhost:5001/api/admin/products", { headers }),
-        axios.get("http://localhost:5001/api/orders/admin", { headers }),
+        axios.get("https://etek-nxx9.onrender.com/api/admin/users", { headers }),
+        axios.get("https://etek-nxx9.onrender.com/api/admin/sellers", { headers }),
+        axios.get("https://etek-nxx9.onrender.com/api/admin/products", { headers }),
+        axios.get("https://etek-nxx9.onrender.com/api/orders/admin", { headers }),
       ]);
 
       setUsers(usersRes.data);
@@ -69,7 +69,7 @@ const AdminDashboard = () => {
 
   const deleteUser = async (userId) => {
     try {
-      await axios.delete(`http://localhost:5001/api/orders/`, {
+      await axios.delete(`https://etek-nxx9.onrender.com/api/orders/`, {
         headers: { Authorization: `Bearer ${adminToken}` }
       });
       message.success("User deleted successfully");

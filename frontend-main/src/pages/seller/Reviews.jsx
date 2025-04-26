@@ -15,7 +15,7 @@ const Reviews = () => {
   const fetchReviews = async () => {
     try {
       const token = localStorage.getItem("sellerToken");
-      const { data } = await axios.get("http://localhost:5001/api/seller/reviews", {
+      const { data } = await axios.get("https://etek-nxx9.onrender.com/api/seller/reviews", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setReviews(data);
@@ -28,7 +28,7 @@ const Reviews = () => {
     try {
       const token = localStorage.getItem("sellerToken");
       await axios.put(
-        `http://localhost:5001/api/seller/reviews/${reviewId}`,
+        `https://etek-nxx9.onrender.com/api/seller/reviews/${reviewId}`,
         { status: "Approved" },
         { headers: { Authorization: `Bearer ${token}` } }
       );

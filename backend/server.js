@@ -49,6 +49,7 @@ app.use(
         "https://shubh.poojahost.net",
         "http://localhost:5001",
         "http://localhost:3002",
+        "https://etek-nxx9.onrender.com"
       ];
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);

@@ -10,7 +10,7 @@ const getImageUrl = (imagePath, imgUrl) => {
   if (imagePath) {
     return imagePath.startsWith("http")
       ? imagePath
-      : `http://localhost:5001/uploads/${encodeURIComponent(imagePath)}`;
+      : `https://etek-nxx9.onrender.com/uploads/${encodeURIComponent(imagePath)}`;
   }
   return imgUrl || "/default-product.png";
 };

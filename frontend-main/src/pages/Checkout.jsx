@@ -19,7 +19,7 @@ import "./checkout.css";
 const { Title, Text } = Typography;
 const { Option } = Select;
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5001";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://etek-nxx9.onrender.com";
 
 const Checkout = () => {
   const location = useLocation();
