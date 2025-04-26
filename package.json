@@ -7,7 +7,7 @@
 
   "dev": "nodemon backend/server.js",
   "start": "node backend/server.js",
-  "build": "npm run build --prefix frontend-main"
+  "build": "npm install npm install && --prefix frontend-main && run build --prefix frontend-main"
 
 
   },
